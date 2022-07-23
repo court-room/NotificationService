@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  notification:
+    command: ["bash", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+    image: notification:development
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app

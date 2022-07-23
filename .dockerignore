@@ -1,0 +1,9 @@
+.git/
+.docker/
+.vscode/
+__pycache__/
+
+.*ignore
+*.sqlite3
+*.yml
+*.md
